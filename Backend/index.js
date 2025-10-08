@@ -102,8 +102,8 @@ app.delete('/delete-note/:index', authorizeUser, async function(req, res) {
 });
 function result() {
   let a = 1;
-  let b = 2;
-  return Math.min(a, b);
+  let c= 2;
+  return Math.min(a, c);
 }
 
 console.log(result()); // Output: 
@@ -174,3 +174,4 @@ app.listen(5000,()=>
     console.log('Port is running')
 
 })
+
