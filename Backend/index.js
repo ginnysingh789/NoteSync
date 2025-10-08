@@ -100,7 +100,13 @@ app.delete('/delete-note/:index', authorizeUser, async function(req, res) {
         res.status(500).json({ msg: 'Error deleting note', error });
     }
 });
+function result() {
+  let a = 1;
+  let b = 2;
+  return Math.min(a, b);
+}
 
+console.log(result()); // Output: 
 
 //Take input notes from the user
 function authorizeUser(req,res,next)
@@ -166,4 +172,5 @@ app.get('/getNotes',authorizeUser, async function(req,res)
 app.listen(5000,()=>
 {
     console.log('Port is running')
+
 })
